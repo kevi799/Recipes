@@ -100,7 +100,7 @@ document.getElementById("submit").addEventListener("click", () => {
 
 // Function to post a new recipe to db.json
 function postRecipeToDb(recipe) {
-  fetch("https://recipes-n0pg.onrender.comrecipes", {
+  fetch("https://recipes-n0pg.onrender.com/recipes", {
     // Adjust the URL if your mock server is hosted elsewhere
     method: "POST",
     headers: {
