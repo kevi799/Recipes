@@ -34,8 +34,23 @@
 
   <div id="home-container" class="container mx-auto py-2">
     <main>
+      <div id="trends" class="mt-12">
+        <h1 id="h1" class="text-2xl font-bold mb-4 text-red-800">What's trending!</h1>
+        <div id="trendingRecipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
 
-      <div id="formSection" class="mt-12 p-6 bg-white rounded-lg shadow-lg">
+      <div id="someOfOurFavourites" class="mt-12">
+        <h2 class="text-xl font-bold mb-4">Some of Your Searched Recipes</h2>
+        <div id="searchResults" class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+
+      <div id="myRecipes" class="mt-12">
+        <h2 id="favRecipes" class="text-xl font-bold mb-4 text-gray-600">My Recipes:</h2>
+        <div id="recipeList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+
+      <!-- Move form section below My Recipes -->
+      <div id="formSection" class="mt-12 p-6 bg-transparent mx-auto max-w-800">
         <h2 class="text-xl font-bold mb-4">Add a Recipe</h2>
         
         <form id="addRecipeForm" class="space-y-4">
@@ -58,21 +73,6 @@
             Add Recipe
           </button>
         </form>
-      </div>
-
-      <div id="trends" class="mt-12">
-        <h1 id="h1" class="text-2xl font-bold mb-4 text-red-800">What's trending!</h1>
-        <div id="trendingRecipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </div>
-
-      <div id="someOfOurFavourites" class="mt-12">
-        <h2 class="text-xl font-bold mb-4">Some of Your Searched Recipes</h2>
-        <div id="searchResults" class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </div>
-
-      <div id="myRecipes" class="mt-12">
-        <h2 id="favRecipes" class="text-xl font-bold mb-4 text-gray-600">My Recipes:</h2>
-        <div id="recipeList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </div>
     </main>
   </div>
