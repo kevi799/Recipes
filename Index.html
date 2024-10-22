@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>food.com</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+  <header class="py-6">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="startPage flex items-center space-x-4">
+        <img src="images/logo.png" alt="food.com logo" class="w-12 h-16" />
+        <div>
+          <h1 class="text-3xl font-bold text-purple-600">FOOD.COM</h1>
+          <p class="introText text-lg italic text-yellow-300">for the love of recipes</p>
+        </div>
+      </div>
+      <nav class="flex space-x-6 text-lg text-white" aria-label="Main Navigation">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#trends" class="hover:underline">What's Trending</a>
+      </nav>
+      <div id="searchBar" class="flex space-x-2">
+        <input type="text" id="search" name="search" class="p-2 rounded-lg" placeholder="What're you looking for?" aria-label="Search recipes" />
+        <button id="submit" class="py-2 px-4 rounded-lg hover:bg-black -600 cursor-pointer bg-teal-700 text-white" aria-label="Search button">
+          Search
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="home-container" class="container mx-auto py-2">
+    <main>
+
+      <div id="formSection" class="mt-12 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Add a Recipe</h2>
+        
+        <form id="addRecipeForm" class="space-y-4">
+          <div>
+            <label for="recipeTitle" class="block font-semibold">Recipe Title:</label>
+            <input type="text" id="recipeTitle" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Enter recipe title" required />
+          </div>
+
+          <div>
+            <label for="recipeImage" class="block font-semibold">Recipe Image URL:</label>
+            <input type="text" id="recipeImage" class="border border-gray-300 rounded-lg p-2 w-full" placeholder="Enter image URL" required />
+          </div>
+
+          <div>
+            <label for="recipeInstructions" class="block font-semibold">Instructions:</label>
+            <textarea id="recipeInstructions" class="border border-gray-300 rounded-lg p-2 w-full" rows="4" placeholder="Enter recipe instructions" required></textarea>
+          </div>
+
+          <button type="submit" class="py-2 px-4 rounded-lg border border-black text-black bg-transparent hover:bg-gray-200 cursor-pointer">
+            Add Recipe
+          </button>
+        </form>
+      </div>
+
+      <div id="trends" class="mt-12">
+        <h1 id="h1" class="text-2xl font-bold mb-4 text-red-800">What's trending!</h1>
+        <div id="trendingRecipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+
+      <div id="someOfOurFavourites" class="mt-12">
+        <h2 class="text-xl font-bold mb-4">Some of Your Searched Recipes</h2>
+        <div id="searchResults" class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+
+      <div id="myRecipes" class="mt-12">
+        <h2 id="favRecipes" class="text-xl font-bold mb-4 text-gray-600">My Recipes:</h2>
+        <div id="recipeList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="py-4 text-center mt-8 bg-teal-800 text-white">
+    <p>&copy; 2024 <b>food.com</b>. All rights reserved.</p>
+  </footer>
+
+  <script src="Index.js"></script>
+</body>
+
+</html>
